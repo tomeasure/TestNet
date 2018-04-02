@@ -14,7 +14,9 @@
 第二个版本，功能与第一个版本相同，但结果**保存于net_data.log**，该程序**不再使用线程**，而是每interval_time设置一个**时间阶**，在每阶执行一次 `speedtest`
 
 ## Upstream_Downstream_Rate_v3.py
-第三个版本，**增加了外部命令** `ping -c n www.baidu.com`，最后的数据保存在net_data.**md**中，数据被简单的处理，保存的形式为表格
+第三个版本，此版本开始测量时延与丢包率。
+
+**增加了外部命令** `ping -c n www.baidu.com`，最后的数据保存在net_data.**md**中，数据被简单的处理，保存的形式为表格
 
 ## Upstream_Downstream_Rate_v4
 第四个版本，将主程序与类**分离**，将类单独作为一个module置于文件夹 `./tools` 中，该module命名为 `tool.py`
