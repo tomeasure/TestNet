@@ -51,7 +51,9 @@ speedtest-cli正是其对应的 **终端** 上测试工具。它是一个使用P
       > round-trip min/avg/max/stddev = 5.279/5.736/6.277/0.412 ms
 
       这里面**avg**与**packet loss**对应的值是我所需要的，为此，在通过
-      `rtn = [p for p in os.popen('ping -c 50 www.baidu.com')]`
+      ```
+      rtn = [p for p in os.popen('ping -c 50 www.baidu.com')]
+      ```
       获取最后两行的字符串信息之后，通过字符串切片的方式获取了相应的值。
 
    2. **上行带宽**（up）和 **下行带宽**（dn）
