@@ -37,6 +37,7 @@ speedtest-cli正是其对应的 **终端** 上测试工具。它是一个使用P
 1. **计时**
    这里的目标是，在指定的 **start_time** 与 **end_time** 范围内，每隔指定的 **interval** 就获取一次数据。可以在 **start_end.conf** 中设置start_time与end_time，格式应与time的asctime一致。我采用的计时方式是：
    > **设置** 一个time_order，在一个循环中，如果当前时间大于该量并小于end_time，则将该量 **增加** 一个interval，然后获取数据并写入文件；否则跳出循环，此时程序执行完毕。
+   > 
    > time_order被初始化为start_time
 
 2. **获取数据**
@@ -46,6 +47,7 @@ speedtest-cli正是其对应的 **终端** 上测试工具。它是一个使用P
 
       执行 `ping -c 50 www.baidu.com` 后，程序返回信息的最后两行是：
       > 50 packets transmitted, 50 packets received, 0.0% packet loss
+      >
       > round-trip min/avg/max/stddev = 5.279/5.736/6.277/0.412 ms
 
       这里面**avg**与**packet loss**对应的值是我所需要的，为此，在通过
